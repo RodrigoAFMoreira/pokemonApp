@@ -21,7 +21,7 @@
             android:id="@+id/textViewUserRegister"
             android:layout_width="100sp"
             android:layout_height="wrap_content"
-            android:text="@string/nome_register"
+            android:text="nome"
             android:textSize="30sp" />
 
         <EditText
@@ -32,13 +32,13 @@
             android:importantForAutofill="no"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:text="@string/nome_TRegister" />
+            android:text="nome..." />
 
         <TextView
             android:id="@+id/textViewSenhaRegister"
             android:layout_width="100sp"
             android:layout_height="wrap_content"
-            android:text="@string/senha_register"
+            android:text="senha:"
             android:textSize="30sp" />
 
         <EditText
@@ -46,7 +46,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:ems="10"
-            android:hint="@string/senha_TRegister"
+            android:hint="senha..."
             android:importantForAutofill="no"
             android:inputType="textPassword"
             android:minHeight="48dp" />
@@ -58,7 +58,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="200dp"
-        android:text="@string/button_register"
+        android:text="registrar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
