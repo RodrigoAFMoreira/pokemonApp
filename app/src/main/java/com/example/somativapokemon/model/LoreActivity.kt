@@ -1,9 +1,11 @@
-package com.example.somativapokemon
+package com.example.somativapokemon.model
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import com.example.somativapokemon.R
+import com.example.somativapokemon.controller.MainActivity
 
 class loreActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
