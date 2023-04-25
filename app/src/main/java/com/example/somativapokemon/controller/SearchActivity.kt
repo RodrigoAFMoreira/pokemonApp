@@ -1,12 +1,13 @@
-package com.example.somativapokemon
+package com.example.somativapokemon.model
 import android.content.Intent
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.provider.MediaStore
-import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.somativapokemon.R
+
 @Suppress("DEPRECATION")
 class searchActivity : AppCompatActivity() {
     var imageViewSearch: ImageView? = null
