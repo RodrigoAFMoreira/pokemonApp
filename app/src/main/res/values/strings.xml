@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SomativaPokemon</string>
+    <string name="the_lore">The Lore</string>
+    <string name="bones">bones</string>
+    <string name="voltarB">voltar</string>
+    <string name="nome_register">nome:</string>
+    <string name="nome_TRegister">nome...</string>
+    <string name="senha_register">senha:</string>
+    <string name="senha_TRegister">senha...</string>
+    <string name="button_register">criar</string>
+</resources>
