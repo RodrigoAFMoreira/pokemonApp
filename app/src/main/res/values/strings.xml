@@ -11,5 +11,6 @@
     <string name="button_search">Search</string>
     <string name="found_pokemons_search">found pokemons</string>
     <string name="Img_poke_search">poke</string>
-    <string name="paragraph_lore">Este aplicativo tem como objetivo rastrear vestigios de pokemons que no passado andavam pela terra, atualmente se encontram extintos, e servem de curiosidade para arqueologos e curiosos</string>
+    <string name="paragraph_lore">Este aplicativo tem como objetivo rastrear vestígios de pokemons que no passado andavam pela Terra. Atualmente se encontram extintos, e servem de fascínio para arqueólogos e curiosos.</string>
+    <string name="estoria_textview_lore">A Estória</string>
 </resources>
