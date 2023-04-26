@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.widget.Button
 import com.example.somativapokemon.R
 import com.example.somativapokemon.model.loreActivity
-import com.example.somativapokemon.model.searchActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         val buttonCriarMain = findViewById<Button>(R.id.buttonCriarMain)
 
         buttonLoginMain?.setOnClickListener {
-            val intent = Intent(this@MainActivity, searchActivity::class.java)
+            val intent = Intent(this@MainActivity, SearchActivity::class.java)
             startActivity(intent)
         }
         buttonSobreMain?.setOnClickListener {

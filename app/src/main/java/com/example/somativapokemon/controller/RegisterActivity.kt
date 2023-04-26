@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.somativapokemon.R
-import com.example.somativapokemon.model.searchActivity
 
 class registerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,7 +14,7 @@ class registerActivity : AppCompatActivity() {
         val buttonEntrarRegister = findViewById<Button>(R.id.buttonEntrarRegister)
 
         buttonEntrarRegister?.setOnClickListener {
-                val intent = Intent(this@registerActivity, searchActivity::class.java)
+                val intent = Intent(this@registerActivity, SearchActivity::class.java)
                 startActivity(intent)
             }
     }

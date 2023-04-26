@@ -1,49 +1,71 @@
-package com.example.somativapokemon.model
+package com.example.somativapokemon.controller
+
+import android.app.Activity
 import android.content.Intent
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.provider.MediaStore
-import android.widget.Button
-import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import coil.load
 import com.example.somativapokemon.R
+import com.example.somativapokemon.databinding.ActivitySearchBinding
+import com.karumi.dexter.Dexter
+import com.karumi.dexter.MultiplePermissionsReport
+import com.karumi.dexter.PermissionToken
+import com.karumi.dexter.listener.PermissionRequest
+import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 
 @Suppress("DEPRECATION")
-class searchActivity : AppCompatActivity() {
-    var imageViewSearch: ImageView? = null
-    var buttonSearch: Button? = null
+class SearchActivity : AppCompatActivity() {
+    private lateinit var binding: ActivitySearchBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivitySearchBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_search)
-        imageViewSearch = findViewById(R.id.imageViewSearch)
-        buttonSearch = findViewById(R.id.buttonSearch)
 
-        imageViewSearch?.setOnClickListener {
-            val imageTakeIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-            if (imageTakeIntent.resolveActivity(packageManager) != null) {
-                startActivityForResult(imageTakeIntent, REQUEST_IMAGE_CAPTURE)
+
+        binding.imageViewSearch.setOnClickListener{
+            cameraCheckPermission()
+        }
+    }
+    private fun cameraCheckPermission() {
+        Dexter.withContext(this)
+            .withPermissions(
+                android.Manifest.permission.READ_EXTERNAL_STORAGE,
+                android.Manifest.permission.CAMERA).withListener(
+                object : MultiplePermissionsListener {
+                    override fun onPermissionsChecked(report: MultiplePermissionsReport?) {
+                        report?.let {
+                            if (report.areAllPermissionsGranted()) {
+                                camera()
+                            }
+                        }
+                    }
+                    override fun onPermissionRationaleShouldBeShown(
+                        p0: MutableList<PermissionRequest>?,
+                        p1: PermissionToken?) {
+                    }
+                }
+            ).onSameThread().check()
+    }
+    private fun camera() {
+        val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        startActivityForResult(intent, CAMERA_REQUEST_CODE)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (resultCode == Activity.RESULT_OK) {
+            when (requestCode) {
+                CAMERA_REQUEST_CODE -> {
+                    val bitmap = data?.extras?.get("data") as Bitmap
+                    binding.imageViewSearch.load(bitmap) {
+                    }
+                }
             }
         }
     }
-    /*fun Camera(view: View?) {
-        val imageTakeIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-        if (imageTakeIntent.resolveActivity(packageManager) != null) {
-            startActivityForResult(imageTakeIntent, REQUEST_IMAGE_CAPTURE)
-        }
-    }*/
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (resultCode == RESULT_OK && requestCode == IMAGE_PICK_CODE) {
-            imageViewSearch!!.setImageURI(data!!.data)
-        }
-        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-            val extras = data!!.extras
-            val imageBitmap = extras!!["data"] as Bitmap?
-            imageViewSearch!!.setImageBitmap(imageBitmap)
-        }
-    }
     companion object {
-        private const val REQUEST_IMAGE_CAPTURE = 101
-        private const val IMAGE_PICK_CODE = 1
+        private const val CAMERA_REQUEST_CODE = 1
     }
 }
