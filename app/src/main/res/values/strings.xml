@@ -8,4 +8,8 @@
     <string name="senha_register">senha:</string>
     <string name="senha_TRegister">senha...</string>
     <string name="button_register">criar</string>
+    <string name="button_search">Search</string>
+    <string name="found_pokemons_search">found pokemons</string>
+    <string name="Img_poke_search">poke</string>
+    <string name="paragraph_lore">Este aplicativo tem como objetivo rastrear vestigios de pokemons que no passado andavam pela terra, atualmente se encontram extintos, e servem de curiosidade para arqueologos e curiosos</string>
 </resources>

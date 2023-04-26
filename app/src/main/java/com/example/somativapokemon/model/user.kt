@@ -5,12 +5,12 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-data class pokemon(
+data class user(
     @ColumnInfo(name = "name")
     var name:String,
 
-    @ColumnInfo(name = "type")
-    var population:Long){
+    @ColumnInfo(name = "password")
+    var password:Long){
 
     @PrimaryKey(autoGenerate = true)
     var uuid:Int = 0
