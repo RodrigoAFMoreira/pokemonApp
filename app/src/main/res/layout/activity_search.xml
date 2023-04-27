@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:shadowColor="#FF9800"
-        android:text="@string/button_search"
+        android:text="@string/btn_procurar_search"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,45 +19,47 @@
         app:layout_constraintVertical_bias="0.24"
         app:strokeColor="#F44336" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewSearch"
-        android:layout_width="415dp"
-        android:layout_height="450dp"
-        tools:listitem="@layout/activity_pokemon"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewSearch" />
-
     <TextView
         android:id="@+id/textViewSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="600dp"
-        android:text="@string/found_pokemons_search"
+        android:text="@string/tv_pokemons_encontrados"
         android:textSize="26sp"
-        app:layout_constraintBottom_toBottomOf="@+id/recyclerViewSearch"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonSearch" />
 
     <ImageView
         android:id="@+id/imageViewSearch"
-        android:layout_width="122dp"
-        android:layout_height="102dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/Img_poke_search"
         app:layout_constraintBottom_toTopOf="@+id/buttonSearch"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars"
-        android:contentDescription="@string/Img_poke_search" />
+        tools:ignore="ImageContrastCheck"
+        tools:srcCompat="@tools:sample/avatars" />
 
-    <!--<androidx.cardview.widget.CardView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/recyclerViewSearch" />!-->
+        app:layout_constraintTop_toBottomOf="@+id/textViewSearch">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewSearch"
+            android:layout_width="415dp"
+            android:layout_height="450dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewSearch"
+            tools:listitem="@layout/activity_pokemon" />
+
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,4 +13,21 @@
     <string name="Img_poke_search">poke</string>
     <string name="paragraph_lore">Este aplicativo tem como objetivo rastrear vestígios de pokemons que no passado andavam pela Terra. Atualmente se encontram extintos, e servem de fascínio para arqueólogos e curiosos.</string>
     <string name="estoria_textview_lore">A Estória</string>
+    <string name="tv_pokemons_encontrados">Pokemons encontrados</string>
+    <string name="tv_nome_regi">Nome:</string>
+    <string name="et_nome_regi">nome...</string>
+    <string name="tv_senha_regi">Senha:</string>
+    <string name="et_senha_regi">senha...</string>
+    <string name="btn_registrar_regi">Registrar</string>
+    <string name="Pokesearch_main">titulo main</string>
+    <string name="pokesearch">PokeSearch</string>
+    <string name="img_pokeball_main">img pokeball main</string>
+    <string name="tv_user_main">User:</string>
+    <string name="et_nome_main">nome...</string>
+    <string name="et_senha_main">senha...</string>
+    <string name="btn_entrar_main">Entrar</string>
+    <string name="btn_criar_main">Criar</string>
+    <string name="btn_sobre_main">Sobre</string>
+    <string name="imagem_pokemon">imagem pokemon</string>
+    <string name="btn_procurar_search">Procurar</string>
 </resources>
