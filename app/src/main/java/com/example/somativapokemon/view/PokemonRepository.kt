@@ -1,4 +1,4 @@
 package com.example.somativapokemon.view
 
-class pokemonRepository {
+class PokemonRepository {
 }

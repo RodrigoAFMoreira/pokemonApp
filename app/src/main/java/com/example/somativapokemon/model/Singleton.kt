@@ -1,7 +1,5 @@
 package com.example.somativapokemon.model
 
-import android.content.Context
-
 object Singleton {
    /* lateinit var citiesArray:List<pokemon>
     lateinit var dao: pokemonDAO

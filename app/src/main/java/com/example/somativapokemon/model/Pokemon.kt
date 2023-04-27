@@ -1,12 +1,13 @@
 package com.example.somativapokemon.model
 
-data class pokemon (
+data class Pokemon (
     val imageUrl: String,
     val number: Int,
     val name: String,
-    val types: List<pokemonType>
+    val types: List<PokemonType>
 )
-
-data class pokemonType(
+data class PokemonType(
     val name: String
 )
+
+

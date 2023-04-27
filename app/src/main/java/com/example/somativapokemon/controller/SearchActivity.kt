@@ -6,9 +6,14 @@ import android.graphics.Bitmap
 import android.os.Bundle
 import android.provider.MediaStore
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.somativapokemon.R
 import com.example.somativapokemon.databinding.ActivitySearchBinding
+import com.example.somativapokemon.model.Pokemon
+import com.example.somativapokemon.model.PokemonType
+import com.example.somativapokemon.view.PokemonAdapter
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken
@@ -22,7 +27,23 @@ class SearchActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySearchBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_search)
+        //
+        val recyclerViewSearch = findViewById<RecyclerView>(R.id.recyclerViewSearch)
 
+        val Zigzagoon = Pokemon(
+            "https://assets.pokemon.com/assets/cms2/img/pokedex/full/263.png",
+            3,
+            "Zigzagoon",
+            listOf(
+                PokemonType("Normal")
+            )
+        )
+        val pokemons = listOf(Zigzagoon,Zigzagoon,Zigzagoon)
+
+        val layoutManager = LinearLayoutManager(this)
+
+        recyclerViewSearch.layoutManager = layoutManager
+        recyclerViewSearch.adapter = PokemonAdapter(pokemons)
 
         binding.imageViewSearch.setOnClickListener{
             cameraCheckPermission()

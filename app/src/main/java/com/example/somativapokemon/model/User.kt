@@ -5,7 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-data class user(
+data class User(
     @ColumnInfo(name = "name")
     var name:String,
 
