@@ -10,8 +10,8 @@
         android:id="@+id/textViewMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Titulo"
-        android:text="Titulo"
+        android:hint="@string/Pokesearch_main"
+        android:text="@string/pokesearch"
         android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/imageViewMain"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,7 +23,7 @@
         android:layout_width="121dp"
         android:layout_height="114dp"
         android:layout_marginTop="100dp"
-        android:contentDescription="pokeball"
+        android:contentDescription="@string/img_pokeball_main"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -33,7 +33,9 @@
         android:id="@+id/linearLayout1Main"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="50dp"
+        android:layout_marginEnd="30dp"
         android:layout_marginBottom="200dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -45,7 +47,7 @@
             android:id="@+id/textViewUserMain"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="User:"
+            android:text="@string/tv_user_main"
             android:textSize="20sp" />
 
         <EditText
@@ -53,10 +55,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="insira nome..."
+            android:hint="@string/et_nome_main"
             android:importantForAutofill="no"
             android:inputType="textPersonName"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            tools:ignore="VisualLintTextFieldSize" />
 
         <TextView
             android:id="@+id/textViewPasswordMain"
@@ -72,9 +75,10 @@
             android:layout_height="wrap_content"
             android:autofillHints=""
             android:ems="10"
-            android:hint="insira senha..."
+            android:hint="@string/et_senha_main"
             android:inputType="textPassword"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            tools:ignore="VisualLintTextFieldSize" />
     </LinearLayout>
 
     <LinearLayout
@@ -93,24 +97,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Entrar"
-            style="?android:attr/buttonBarButtonStyle" />
+            android:text="@string/btn_entrar_main"
+            style="?android:attr/buttonBarButtonStyle"
+            tools:ignore="VisualLintButtonSize" />
 
         <Button
             android:id="@+id/buttonCriarMain"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Criar"
-            style="?android:attr/buttonBarButtonStyle" />
+            android:text="@string/btn_criar_main"
+            style="?android:attr/buttonBarButtonStyle"
+            tools:ignore="VisualLintButtonSize" />
 
         <Button
             android:id="@+id/buttonSobreMain"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Sobre"
-            style="?android:attr/buttonBarButtonStyle" />
+            android:text="@string/btn_sobre_main"
+            style="?android:attr/buttonBarButtonStyle"
+            tools:ignore="VisualLintButtonSize" />
 
 
     </LinearLayout>
