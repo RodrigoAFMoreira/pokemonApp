@@ -12,6 +12,8 @@ import android.widget.Toast
 class MainActivity : AppCompatActivity() {
 
     private lateinit var loginbtn: Button
+    private lateinit var registerbtn: Button
+    private lateinit var lorebtn: Button
     private lateinit var edituser: EditText
     private lateinit var editpword: EditText
     private lateinit var dbh: UserDB
@@ -29,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             val passedtx = editpword.text.toString()
 
             if(TextUtils.isEmpty(useredtx)|| TextUtils.isEmpty(passedtx)){
-                Toast.makeText(this,"adicione usename & password", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"adicione nome... & senha...", Toast.LENGTH_SHORT).show()
             }
             else{
                 val checkuser = dbh.checkuserpass(useredtx, passedtx)
@@ -37,20 +39,17 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(this,"login feito com sucesso", Toast.LENGTH_SHORT).show()
                 }
                 else{
-                    Toast.makeText(this,"usename & password errado(s)", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this,"nome... & senha... errado(s)", Toast.LENGTH_SHORT).show()
                 }
             }
         }
-        val buttonLore = findViewById<Button>(R.id.buttonSobreMain)
-
-        buttonLore?.setOnClickListener {
+        lorebtn = findViewById<Button>(R.id.buttonSobreMain)
+        lorebtn.setOnClickListener {
             val intent = Intent(this@MainActivity, LoreActivity::class.java)
             startActivity(intent)
         }
-
-        val buttonRegister = findViewById<Button>(R.id.buttonCriarMain)
-
-        buttonRegister?.setOnClickListener {
+        registerbtn = findViewById<Button>(R.id.buttonCriarMain)
+        registerbtn.setOnClickListener {
             val intent = Intent(this@MainActivity, RegisterActivity::class.java)
             startActivity(intent)
         }

@@ -30,4 +30,5 @@
     <string name="btn_sobre_main">Sobre</string>
     <string name="imagem_pokemon">imagem pokemon</string>
     <string name="btn_procurar_search">Procurar</string>
+    <string name="confirmar_senha1">Confirmar Senha:</string>
 </resources>

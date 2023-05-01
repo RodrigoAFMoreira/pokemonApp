@@ -19,8 +19,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".model.loreActivity" />
-        <activity android:name=".controller.registerActivity" />
+        <activity android:name=".controller.LoreActivity" />
+        <activity android:name=".controller.RegisterActivity" />
         <activity android:name=".controller.SearchActivity" />
     </application>
 

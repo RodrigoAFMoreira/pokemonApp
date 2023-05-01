@@ -33,21 +33,21 @@ class RegisterActivity : AppCompatActivity() {
             val savedata = db.inserirdata(unametext,pwordtext)
 
             if(TextUtils.isEmpty(unametext)|| TextUtils.isEmpty(pwordtext) || TextUtils.isEmpty(cpwordtext)) {
-                Toast.makeText(this, "adicione username, password & confirme password", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "adicione um nome..., senha... & confirme senha...", Toast.LENGTH_SHORT).show()
             }
             else{
                 if(pwordtext.equals(cpwordtext)){
                     if(savedata==true){
-                        Toast.makeText(this,"Signup feita com sucesso", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this,"Conta registrada com sucesso", Toast.LENGTH_SHORT).show()
                         val intent = Intent(applicationContext, SearchActivity::class.java)
                         startActivity(intent)
                     }
                     else{
-                        Toast.makeText(this,"User já existe", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this,"Usuário já existe", Toast.LENGTH_SHORT).show()
                     }
                 }
                 else{
-                    Toast.makeText(this,"password não se encaixa", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this,"Senha não se encaixa", Toast.LENGTH_SHORT).show()
                 }
             }
         }

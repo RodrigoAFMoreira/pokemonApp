@@ -1,29 +1,18 @@
 package com.example.somativapokemon.controller
 
-import android.app.Activity
-import android.content.Intent
-import android.graphics.Bitmap
 import android.os.Bundle
-import android.provider.MediaStore
 import androidx.appcompat.app.AppCompatActivity
-import coil.load
 import com.example.somativapokemon.R
-import com.example.somativapokemon.databinding.ActivitySearchBinding
-import com.karumi.dexter.Dexter
-import com.karumi.dexter.MultiplePermissionsReport
-import com.karumi.dexter.PermissionToken
-import com.karumi.dexter.listener.PermissionRequest
-import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 
 
 class SearchActivity : AppCompatActivity() {
-    private lateinit var binding: ActivitySearchBinding
+    //private lateinit var binding: ActivitySearchBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
 
 
-        binding.imageViewSearch.setOnClickListener{
+       /* binding.imageViewSearch.setOnClickListener{
             cameraCheckPermission()
         }
     }
@@ -65,6 +54,6 @@ class SearchActivity : AppCompatActivity() {
         }
     }
     companion object {
-        private const val CAMERA_REQUEST_CODE = 1
+        private const val CAMERA_REQUEST_CODE = 1*/
     }
 }
