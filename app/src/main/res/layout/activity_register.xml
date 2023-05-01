@@ -24,7 +24,7 @@
             android:layout_width="100sp"
             android:layout_height="wrap_content"
             android:text="@string/tv_nome_regi"
-            android:textSize="30sp"
+            android:textSize="25sp"
             tools:ignore="TextSizeCheck" />
 
         <EditText
@@ -43,7 +43,7 @@
             android:layout_width="100sp"
             android:layout_height="wrap_content"
             android:text="@string/tv_senha_regi"
-            android:textSize="30sp"
+            android:textSize="25sp"
             tools:ignore="TextSizeCheck" />
 
         <EditText
@@ -62,7 +62,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/confirmar_senha1"
-            android:textSize="30sp"
+            android:textSize="25sp"
             tools:ignore="TextSizeCheck" />
 
         <EditText

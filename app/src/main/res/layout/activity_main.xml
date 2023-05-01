@@ -48,7 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/tv_user_main"
-            android:textSize="20sp" />
+            android:textSize="25sp" />
 
         <EditText
             android:id="@+id/editTextNomeMain"
@@ -66,7 +66,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Senha:"
-            android:textSize="20sp"
+            android:textSize="25sp"
             tools:ignore="HardcodedText" />
 
         <EditText
