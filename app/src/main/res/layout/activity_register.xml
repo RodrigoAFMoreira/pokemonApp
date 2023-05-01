@@ -56,6 +56,24 @@
             android:inputType="textPassword"
             android:minHeight="48dp" />
 
+        <TextView
+            android:id="@+id/textViewSenhaRegister2"
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:text="Confirmar Senha:"
+            android:textSize="30sp"
+            tools:ignore="TextSizeCheck" />
+
+        <EditText
+            android:id="@+id/editTextTextPassword2"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:ems="10"
+            android:hint="@string/et_senha_regi"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:minHeight="48dp" />
+
     </LinearLayout>
 
     <Button
