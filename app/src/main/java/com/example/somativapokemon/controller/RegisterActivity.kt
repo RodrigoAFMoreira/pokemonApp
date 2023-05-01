@@ -5,17 +5,51 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.somativapokemon.R
+import android.text.TextUtils
+import android.widget.EditText
+import android.widget.Toast
 
-class registerActivity : AppCompatActivity() {
+class RegisterActivity : AppCompatActivity() {
+
+    private lateinit var uname: EditText
+    private lateinit var pword: EditText
+    private lateinit var cpword: EditText
+    private lateinit var signupbtn: Button
+    private lateinit var db: UserDB
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        val buttonEntrarRegister = findViewById<Button>(R.id.buttonEntrarRegister)
+        uname = findViewById(R.id.editTextNomeRegsiter)
+        pword = findViewById(R.id.editTextTextPassword)
+        cpword = findViewById(R.id.editTextTextPassword2)
+        signupbtn = findViewById(R.id.buttonEntrarRegister)
+        db = UserDB(this)
 
-        buttonEntrarRegister?.setOnClickListener {
-                val intent = Intent(this@registerActivity, SearchActivity::class.java)
-                startActivity(intent)
+        signupbtn.setOnClickListener{
+            val unametext = uname.text.toString()
+            val pwordtext = pword.text.toString()
+            val cpwordtext = cpword.text.toString()
+            val savedata = db.inserirdata(unametext,pwordtext)
+
+            if(TextUtils.isEmpty(unametext)|| TextUtils.isEmpty(pwordtext) || TextUtils.isEmpty(cpwordtext)) {
+                Toast.makeText(this, "adicione username, password & confirme password", Toast.LENGTH_SHORT).show()
             }
+            else{
+                if(pwordtext.equals(cpwordtext)){
+                    if(savedata==true){
+                        Toast.makeText(this,"Signup feita com sucesso", Toast.LENGTH_SHORT).show()
+                        val intent = Intent(applicationContext, SearchActivity::class.java)
+                        startActivity(intent)
+                    }
+                    else{
+                        Toast.makeText(this,"User já existe", Toast.LENGTH_SHORT).show()
+                    }
+                }
+                else{
+                    Toast.makeText(this,"password não se encaixa", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
     }
 }
