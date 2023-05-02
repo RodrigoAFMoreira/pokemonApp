@@ -8,6 +8,7 @@ import com.example.somativapokemon.R
 import android.text.TextUtils
 import android.widget.EditText
 import android.widget.Toast
+import com.example.somativapokemon.model.UserDB
 
 class RegisterActivity : AppCompatActivity() {
 

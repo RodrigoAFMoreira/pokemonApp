@@ -1,4 +1,4 @@
-package com.example.somativapokemon.controller
+package com.example.somativapokemon.model
 
 import android.content.ContentValues
 import android.content.Context

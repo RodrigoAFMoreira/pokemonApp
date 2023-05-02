@@ -8,6 +8,7 @@ import com.example.somativapokemon.R
 import android.text.TextUtils
 import android.widget.EditText
 import android.widget.Toast
+import com.example.somativapokemon.model.UserDB
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,6 +26,8 @@ class MainActivity : AppCompatActivity() {
         edituser = findViewById(R.id.editTextNomeMain)
         editpword = findViewById(R.id.editTextSenhaMain)
         dbh = UserDB(this)
+        lorebtn = findViewById<Button>(R.id.buttonSobreMain)
+        registerbtn = findViewById<Button>(R.id.buttonCriarMain)
 
         loginbtn.setOnClickListener{
             val useredtx = edituser.text.toString()
@@ -43,12 +46,10 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-        lorebtn = findViewById<Button>(R.id.buttonSobreMain)
         lorebtn.setOnClickListener {
             val intent = Intent(this@MainActivity, LoreActivity::class.java)
             startActivity(intent)
         }
-        registerbtn = findViewById<Button>(R.id.buttonCriarMain)
         registerbtn.setOnClickListener {
             val intent = Intent(this@MainActivity, RegisterActivity::class.java)
             startActivity(intent)
