@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvNumber"
+        android:id="@+id/textViewNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#757575"
@@ -31,10 +31,11 @@
 
 
     <TextView
-        android:id="@+id/textViewNumberPokemon"
+        android:id="@+id/textViewTitlePokemon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="30dp"
         android:textColor="#313131"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,7 +48,7 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewNumberPokemon">
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitlePokemon">
 
         <TextView
             android:id="@+id/textViewTipo1"
