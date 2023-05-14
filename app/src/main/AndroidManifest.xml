@@ -14,16 +14,26 @@
         android:theme="@style/Theme.SomativaPokemon"
         tools:targetApi="31">
         <activity
-            android:name=".controller.MainActivity"
+            android:name=".model.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".controller.LoreActivity" />
-        <activity android:name=".controller.RegisterActivity" />
-        <activity android:name=".view.search.SearchActivity" />
+        <activity android:name=".view.LoreActivity" />
+        <activity android:name=".model.RegisterActivity" />
+        <activity android:name=".controller.UserDB" />
+
+        <activity android:name=".controller.Pokemon" />
+        <activity android:name=".controller.PokemonType" />
+
+        <activity android:name=".model.PokemonCollection" />
+        <activity android:name=".model.PokemonApiResult" />
+        <activity android:name=".model.PokemonService" />
+
+        <activity android:name=".view.PokemonAdapter" />
+        <activity android:name=".view.PokemonSearch" />
     </application>
 
 </manifest>

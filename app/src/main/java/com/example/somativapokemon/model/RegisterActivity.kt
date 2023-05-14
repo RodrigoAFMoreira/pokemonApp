@@ -1,4 +1,4 @@
-package com.example.somativapokemon.controller
+package com.example.somativapokemon.model
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,7 +8,8 @@ import com.example.somativapokemon.R
 import android.text.TextUtils
 import android.widget.EditText
 import android.widget.Toast
-import com.example.somativapokemon.view.search.SearchActivity
+import com.example.somativapokemon.controller.UserDB
+import com.example.somativapokemon.view.PokemonSearch
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -40,7 +41,7 @@ class RegisterActivity : AppCompatActivity() {
                 if(pwordtext.equals(cpwordtext)){
                     if(savedata==true){
                         Toast.makeText(this,"Conta registrada com sucesso", Toast.LENGTH_SHORT).show()
-                        val intent = Intent(applicationContext, SearchActivity::class.java)
+                        val intent = Intent(applicationContext, PokemonSearch::class.java)
                         startActivity(intent)
                     }
                     else{

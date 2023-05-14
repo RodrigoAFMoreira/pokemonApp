@@ -1,10 +1,11 @@
-package com.example.somativapokemon.controller
+package com.example.somativapokemon.view
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.somativapokemon.R
+import com.example.somativapokemon.model.MainActivity
 
 class LoreActivity : AppCompatActivity() {
     private lateinit var btnLore: Button

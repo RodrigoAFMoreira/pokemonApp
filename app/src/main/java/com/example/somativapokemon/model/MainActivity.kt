@@ -1,4 +1,4 @@
-package com.example.somativapokemon.controller
+package com.example.somativapokemon.model
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +8,8 @@ import com.example.somativapokemon.R
 import android.text.TextUtils
 import android.widget.EditText
 import android.widget.Toast
+import com.example.somativapokemon.controller.UserDB
+import com.example.somativapokemon.view.LoreActivity
 
 class MainActivity : AppCompatActivity() {
 
