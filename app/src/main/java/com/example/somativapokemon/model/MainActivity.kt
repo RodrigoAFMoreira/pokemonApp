@@ -13,30 +13,30 @@ import com.example.somativapokemon.view.LoreActivity
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var loginbtn: Button
-    private lateinit var registerbtn: Button
-    private lateinit var lorebtn: Button
-    private lateinit var edituser: EditText
-    private lateinit var editpword: EditText
-    private lateinit var dbh: UserDB
+    private lateinit var loginButton: Button
+    private lateinit var registerButton: Button
+    private lateinit var loreButton: Button
+    private lateinit var editUser: EditText
+    private lateinit var editPword: EditText
+    private lateinit var db: UserDB
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        loginbtn = findViewById(R.id.buttonLoginMain)
-        edituser = findViewById(R.id.editTextNomeMain)
-        editpword = findViewById(R.id.editTextSenhaMain)
-        dbh = UserDB(this)
+        loginButton = findViewById(R.id.buttonLoginMain)
+        editUser = findViewById(R.id.editTextNomeMain)
+        editPword = findViewById(R.id.editTextSenhaMain)
+        db = UserDB(this)
 
-        loginbtn.setOnClickListener{
-            val useredtx = edituser.text.toString()
-            val passedtx = editpword.text.toString()
+        loginButton.setOnClickListener{
+            val useredtx = editUser.text.toString()
+            val passedtx = editPword.text.toString()
 
             if(TextUtils.isEmpty(useredtx)|| TextUtils.isEmpty(passedtx)){
                 Toast.makeText(this,"adicione nome... & senha...", Toast.LENGTH_SHORT).show()
             }
             else{
-                val checkuser = dbh.checkuserpass(useredtx, passedtx)
+                val checkuser = db.checkuserpass(useredtx, passedtx)
                 if(checkuser==true){
                     Toast.makeText(this,"login feito com sucesso", Toast.LENGTH_SHORT).show()
                 }
@@ -45,13 +45,13 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-        lorebtn = findViewById<Button>(R.id.buttonSobreMain)
-        lorebtn.setOnClickListener {
+        loreButton = findViewById<Button>(R.id.buttonSobreMain)
+        loreButton.setOnClickListener {
             val intent = Intent(this@MainActivity, LoreActivity::class.java)
             startActivity(intent)
         }
-        registerbtn = findViewById<Button>(R.id.buttonCriarMain)
-        registerbtn.setOnClickListener {
+        registerButton = findViewById<Button>(R.id.buttonCriarMain)
+        registerButton.setOnClickListener {
             val intent = Intent(this@MainActivity, RegisterActivity::class.java)
             startActivity(intent)
         }

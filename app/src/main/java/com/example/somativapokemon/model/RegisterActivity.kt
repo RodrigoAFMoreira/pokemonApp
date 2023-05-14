@@ -8,30 +8,32 @@ import com.example.somativapokemon.R
 import android.text.TextUtils
 import android.widget.EditText
 import android.widget.Toast
+
 import com.example.somativapokemon.controller.UserDB
+
 import com.example.somativapokemon.view.PokemonSearch
 
 class RegisterActivity : AppCompatActivity() {
 
-    private lateinit var uname: EditText
-    private lateinit var pword: EditText
-    private lateinit var cpword: EditText
-    private lateinit var signupbtn: Button
+    private lateinit var userName: EditText
+    private lateinit var userPword: EditText
+    private lateinit var userCPword: EditText
+    private lateinit var enterButton: Button
     private lateinit var db: UserDB
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        uname = findViewById(R.id.editTextNomeRegsiter)
-        pword = findViewById(R.id.editTextTextPassword)
-        cpword = findViewById(R.id.editTextTextPassword2)
-        signupbtn = findViewById(R.id.buttonEntrarRegister)
+        userName = findViewById(R.id.editTextNomeRegsiter)
+        userPword = findViewById(R.id.editTextTextPassword)
+        userCPword = findViewById(R.id.editTextTextPassword2)
+        enterButton = findViewById(R.id.buttonEntrarRegister)
         db = UserDB(this)
 
-        signupbtn.setOnClickListener{
-            val unametext = uname.text.toString()
-            val pwordtext = pword.text.toString()
-            val cpwordtext = cpword.text.toString()
+        enterButton.setOnClickListener{
+            val unametext = userName.text.toString()
+            val pwordtext = userPword.text.toString()
+            val cpwordtext = userCPword.text.toString()
             val savedata = db.inserirdata(unametext,pwordtext)
 
             if(TextUtils.isEmpty(unametext)|| TextUtils.isEmpty(pwordtext) || TextUtils.isEmpty(cpwordtext)) {
