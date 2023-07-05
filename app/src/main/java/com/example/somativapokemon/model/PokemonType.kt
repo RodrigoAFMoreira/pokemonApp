@@ -1,4 +1,4 @@
-package com.example.somativapokemon.controller
+package com.example.somativapokemon.model
 
 data class PokemonType(
     val name: String

@@ -1,4 +1,4 @@
-package com.example.somativapokemon.model
+package com.example.somativapokemon.controller
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,8 +8,7 @@ import com.example.somativapokemon.R
 import android.text.TextUtils
 import android.widget.EditText
 import android.widget.Toast
-
-import com.example.somativapokemon.controller.UserDB
+import com.example.somativapokemon.model.UserDB
 
 import com.example.somativapokemon.view.PokemonSearch
 

@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.somativapokemon.R
-import com.example.somativapokemon.controller.Pokemon
+import com.example.somativapokemon.model.Pokemon
 import com.example.somativapokemon.model.PokemonCollection
 
 class PokemonSearch : AppCompatActivity() {

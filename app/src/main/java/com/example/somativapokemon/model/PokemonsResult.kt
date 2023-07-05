@@ -1,7 +1,5 @@
 package com.example.somativapokemon.model
 
-import com.example.somativapokemon.controller.PokemonType
-
 data class PokemonsApiResult(
     val count: Int,
     val next: String?,

@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.somativapokemon.R
-import com.example.somativapokemon.controller.Pokemon
+import com.example.somativapokemon.model.Pokemon
 
 class PokemonAdapter(
     private val items: List<Pokemon?>
@@ -36,7 +36,6 @@ class PokemonAdapter(
             val tvType1 = findViewById<TextView>(R.id.textViewTipo1)
             val tvType2 = findViewById<TextView>(R.id.textViewTipo2)
 
-            // ver
             item?.let {
                 Glide.with(itemView.context).load(it.imageUrl).into(ivPokemon)
 

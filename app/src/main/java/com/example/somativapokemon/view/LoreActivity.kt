@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.somativapokemon.R
-import com.example.somativapokemon.model.MainActivity
+import com.example.somativapokemon.controller.MainActivity
 
 class LoreActivity : AppCompatActivity() {
     private lateinit var btnLore: Button

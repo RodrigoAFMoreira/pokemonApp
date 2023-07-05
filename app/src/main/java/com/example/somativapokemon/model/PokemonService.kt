@@ -6,7 +6,6 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface PokemonService {
-    //problema
     @GET("pokemon")
     fun listPokemons(@Query("limit") limit: Int): Call<PokemonsApiResult>
 
